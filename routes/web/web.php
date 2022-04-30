@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
-//Socialite
+
+
+
 Route::get('login/{provider}', 'Auth\SocialController@redirectToProvider')
     ->where('provider', 'apple|twitter|facebook|linkedin|google|github|bitbucket')->name('login.social');
 Route::get('login/{provider}/callback', 'Auth\SocialController@handleProviderCallback')
