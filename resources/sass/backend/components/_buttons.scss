@@ -1,0 +1,35 @@
+.bb-buttons-group {
+    display: flex;
+    align-items: center;
+    .buttons {
+        margin-bottom: 0;
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+    }
+    .button {
+        margin-bottom: 0;
+    }
+}
+
+.buttons.has-addons {
+    > * {
+        &:not(:first-child):not(:last-child) {
+            .button {
+                border-radius: 0 !important;
+            }
+        }
+        &:first-child {
+            .button {
+                border-top-right-radius: 0 !important;
+                border-bottom-right-radius: 0 !important;
+            }
+        }
+        &:last-child {
+            .button {
+                border-top-left-radius: 0 !important;
+                border-bottom-left-radius: 0 !important;
+            }
+        }
+    }
+}

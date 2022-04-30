@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap");
+
+// Import custom variables
+@import "./variables";
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+// Import root setup
+@import "./root";
+
+/* Theme components */
+@import "./components/all";
+@import "./helpers";
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--bb-background-secondary, $background-secondary);
+}
+
+.bb-content {
+    height: calc(100vh - 3.25rem);
+}
+
+.bb-view {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.slideIn-enter-active {
+    animation: fade-in 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.995);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.m-0 {
+    margin: 0;
+}

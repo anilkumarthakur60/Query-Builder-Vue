@@ -1,0 +1,68 @@
+$light: $white-ter !default;
+$dark: $grey-darker !default;
+
+// Invert colors
+$orange-invert: findColorInvert($orange) !default;
+$yellow-invert: findColorInvert($yellow) !default;
+$green-invert: findColorInvert($green) !default;
+$turquoise-invert: findColorInvert($turquoise) !default;
+$cyan-invert: findColorInvert($cyan) !default;
+$blue-invert: findColorInvert($blue) !default;
+$purple-invert: findColorInvert($purple) !default;
+$red-invert: findColorInvert($red) !default;
+
+$primary-invert: findColorInvert($primary) !default;
+
+//light
+$primary-light: findLightColor($primary) !default;
+
+//dark
+$primary-dark: findDarkColor($primary) !default;
+$info-invert: findColorInvert($info) !default;
+$info-light: findLightColor($info) !default;
+$info-dark: findDarkColor($info) !default;
+$success-invert: findColorInvert($success) !default;
+$success-light: findLightColor($success) !default;
+$success-dark: findDarkColor($success) !default;
+$warning-invert: findColorInvert($warning) !default;
+$warning-light: findLightColor($warning) !default;
+$warning-dark: findDarkColor($warning) !default;
+$danger-invert: findColorInvert($danger) !default;
+$danger-light: findLightColor($danger) !default;
+$danger-dark: findDarkColor($danger) !default;
+$light-invert: findColorInvert($light) !default;
+$dark-invert: findColorInvert($dark) !default;
+
+$colors: (
+    "white": $white,
+    "white-bis": $white-bis,
+    "white-ter": $white-ter,
+    "black": $black,
+    "black-bis": $black-bis,
+    "black-ter": $black-ter,
+    "grey": $grey,
+    "grey-light": $grey-light,
+    "grey-dark": $grey-dark,
+    "blue": $blue,
+    "purple": $purple,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "cyan": $cyan,
+    "primary": $primary,
+    "primary-invert": $primary-invert,
+    "primary-light": $primary-light,
+    "info": $info,
+    "light": $light,
+    "background": $background,
+    "background-primary": $background-primary,
+    "background-secondary": $background-secondary,
+);
+
+:root {
+    // Custom variable values only support SassScript inside `#{}`.
+    @each $color, $value in $colors {
+        --bb-#{$color}: #{$value};
+    }
+}

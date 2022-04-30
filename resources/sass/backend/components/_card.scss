@@ -1,0 +1,79 @@
+.card {
+    border-radius: $card-radius;
+    .card-header {
+        border-bottom: 1px solid var(--bb-white-ter, $white-ter);
+    }
+    .card-content {
+        hr {
+            margin-left: -$card-content-padding;
+            margin-right: -$card-content-padding;
+        }
+    }
+
+    &.is-warning{
+        border: 2px solid $warning;
+    }
+    &.is-danger{
+        border: 2px solid $danger;
+    }
+}
+
+.bb-card-chart {
+    width: 100%;
+    position: relative;
+    .chart-container.is-background {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 70%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: inherit;
+    }
+    .card-content {
+        position: relative;
+    }
+}
+
+.bb-card-metrics {
+    display: flex;
+    overflow: auto;
+    .metrics-item {
+        padding: 2rem;
+        font-weight: bold;
+        min-width: 170px;
+        &:not(:last-child) {
+            border-right: solid 1px var(--bb-white-ter, $white-ter);
+        }
+        &.is-success {
+            .metrics-subvalue {
+                color: var(--bb-sucess, $success);
+                .icon {
+                    background-color: rgba($color: $success, $alpha: 0.15);
+                }
+            }
+        }
+        &.is-danger {
+            .metrics-subvalue {
+                color: var(--bb-danger, $danger);
+                .icon {
+                    background-color: rgba($color: $danger, $alpha: 0.15);
+                }
+            }
+        }
+        .metrics-title {
+            color: var(--bb-grey, $grey);
+        }
+        .metrics-value {
+            margin: 0;
+        }
+        .metrics-subvalue {
+            .icon {
+                background-color: rgba($color: $grey, $alpha: 0.2);
+                border-radius: 50%;
+                padding: 10px;
+            }
+            color: var(--bb-grey, $grey);
+        }
+    }
+}

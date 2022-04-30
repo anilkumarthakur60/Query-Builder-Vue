@@ -1,0 +1,46 @@
+.bb-navbar {
+    border-bottom: 1px solid var(--bb-light, $light);
+
+    .navbar-brand {
+        min-width: $sidebar-width;
+        border-right: 1px solid;
+        border-color: var(--bb-light, $light);
+    }
+    .navbar-item {
+        &.is-icon {
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        &.has-divider {
+            border-right: 1px solid var(--bb-light, $light);
+        }
+        &.has-divider-left {
+            border-left: 1px solid var(--bb-light, $light);
+        }
+    }
+    .control {
+        height: 100%;
+        width: 100%;
+        input {
+            border: 0;
+            outline: 0;
+            box-shadow: none;
+            min-height: 2.25em;
+
+            &:focus {
+                border: 0;
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+        & > * {
+            height: 100% !important;
+        }
+    }
+}
+
+.navbar-link {
+    .avatar {
+        margin-right: 0.5rem;
+    }
+}

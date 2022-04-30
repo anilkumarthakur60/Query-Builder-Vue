@@ -1,0 +1,33 @@
+.bb-box {
+    border: 1px solid var(--bb-white-ter, $white-ter);
+    border-radius: $radius-large;
+    background-color: var(--bb-white, $white);
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
+
+    .box-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid var(--bb-white-ter, $white-ter);
+        min-height: 50px;
+        flex-wrap: wrap;
+        .title {
+            margin: 0;
+            padding: 0.5rem 1rem;
+            font-size: $size-4;
+        }
+        .level-left,
+        .level-right {
+            align-items: flex-end;
+            > div {
+                padding: 0.5rem;
+            }
+        }
+    }
+    .box-content {
+        padding: 1rem;
+        position: relative;
+    }
+}

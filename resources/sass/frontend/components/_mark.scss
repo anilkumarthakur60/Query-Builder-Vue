@@ -1,0 +1,26 @@
+mark {
+    background: none;
+    font-weight: bold;
+    color: inherit;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0.5rem;
+        height: 70%;
+        top: 35%;
+        width: calc(100%);
+        z-index: -1;
+        background-color: rgba($color: $primary, $alpha: 0.2);
+    }
+    &.is-danger {
+        &::after {
+            background-color: rgba($color: $danger, $alpha: 0.2);
+        }
+    }
+    &.is-success {
+        &::after {
+            background-color: rgba($color: $success, $alpha: 0.2);
+        }
+    }
+}

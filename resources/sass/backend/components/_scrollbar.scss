@@ -1,0 +1,19 @@
+.bb-scrollbar,
+.bb-scrollbar div {
+    &::-webkit-scrollbar-track {
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        border-radius: $radius-rounded;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: $radius-rounded;
+        background-color: hsl(0, 0%, 86%);
+    }
+}

@@ -1,0 +1,48 @@
+.bb-table {
+    border: 1px solid var(--bb-white-ter, $white-ter);
+    border-radius: $radius-large;
+    background-color: var(--bb-white, $white);
+    .bb-table-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid var(--bb-white-ter, $white-ter);
+        min-height: 50px;
+        flex-wrap: wrap;
+        .title {
+            margin: 0;
+            padding: 0.5rem 1rem;
+            font-size: $size-4;
+        }
+        .level-left,
+        .level-right {
+            margin: 0;
+            align-items: flex-end;
+            > div {
+                padding: 0.5rem;
+            }
+        }
+    }
+    .b-table .level:last-child {
+        padding: 0;
+        > div {
+            padding: 0.5rem;
+        }
+    }
+    .table td,
+    .table th {
+        border-color: var(--bb-white-ter, $white-ter);
+    }
+    .check {
+        border-color: var(--bb-grey-light, $grey-light);
+    }
+
+    @include mobile {
+        .b-table {
+            padding: 0.5rem;
+            .table-wrapper.has-mobile-cards tr {
+                border-radius: $radius-large;
+            }
+        }
+    }
+}
