@@ -14,12 +14,7 @@
     ],
     "homepage": "https://buefboard.com/",
     "license": "MIT",
-    "authors": [{
-        "name": "Quentin Gabriele",
-        "email": "quentin.gabriele@gmail.com",
-        "homepage": "https://github.com/QuentinGab",
-        "role": "Developer"
-    }],
+
     "require": {
         "php": "^8.0.2",
         "fruitcake/laravel-cors": "^3.0",
